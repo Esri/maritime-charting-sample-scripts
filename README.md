@@ -1,7 +1,5 @@
 # maritime-charting-sample-scripts
 
-Most
-
 This repository contains simple models and python scripts that demonstrate how to automate various tasks using teh ArcGIS for Maritime: Charting extension. Learn more [here](http://www.esri.com/software/arcgis/extensions/maritime/charting/).
 
 [View some of these tools in action](https://www.youtube.com/channel/UC3TLoqZ0pAY9CU3ff58k3rg/)
