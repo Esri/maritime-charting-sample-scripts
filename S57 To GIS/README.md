@@ -30,4 +30,4 @@ documents, keeping the originals as a template that can be reused.
 2. In ArcMap, open the ArcCatalog window and navigate to the location of the S57 To GIS.tbx.
 3. Expand S57 To GIS.tbx
 
-      ![App](toolbox.png)
+                              ![App](toolbox.png)
