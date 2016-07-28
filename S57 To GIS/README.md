@@ -16,10 +16,10 @@ Overview of materials provided:
 * S57_GIS.gdb – A preconfigured geodatabase template schema.
 
 Overview of tool functions:
-* This script iterates through the contents of the *Input Directory* parameter and finds all S-57 cells and their associated updates.
-* The list of cells is then imported into the workspace defined in the Target Workspace parameter.
+* This script iterates through the contents of the **Input Directory** parameter and finds all S-57 cells and their associated updates.
+* The list of cells is then imported into the workspace defined in the **Target Workspace** parameter.
 * Once the import process is complete, the script calculates S-52 on the geodatabase
-* Lastly, the script resources the feature classes from the Target Workspace to the map document selected in the Map Document parameter. It also zooms the data frame in the map document to the extent of all of all the Meta polygon features (M_QUAL, for example).
+* Lastly, the script resources the feature classes from the Target Workspace to the map document selected in the **Map Document** parameter. It also zooms the data frame in the map document to the extent of all of all the Meta polygon features (M_QUAL, for example).
 
 # Steps to use S57 To GIS
 
@@ -28,7 +28,7 @@ documents, keeping the originals as a template that can be reused.
 
 1. Open ArcMap
 2. In ArcMap, open the ArcCatalog window and navigate to the location of the S57 To GIS.tbx.
-3. Expand S57 To GIS.tbx
+3. Expand **S57 To GIS.tbx**
 
 ![App](toolbox.png)
 
@@ -36,11 +36,11 @@ documents, keeping the originals as a template that can be reused.
 
 ![App](tool.png)
 
-5. For the Input Directory, browse to the location of the cells(s) you want to import
+5. For the **Input Directory**, browse to the location of the cells(s) you want to import
 Note: The cells in the input directory can be in either the US or International exchange set
 format, or they can simply be contained under the Input Directory in no particular structure.
-6. For the Target Workspace, browse to the location of the geodatabase you want to import into.
-7. For Map Document, choose a template map document for visualizing the output.
+6. For the **Target Workspace**, browse to the location of the geodatabase you want to import into.
+7. For **Map Document**, choose a template map document for visualizing the output.
 8. Click OK
 The cells are imported, the data is symbolized, and the map document is resourced and zoomed
 to the target workspace data.
