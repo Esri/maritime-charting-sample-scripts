@@ -31,3 +31,16 @@ documents, keeping the originals as a template that can be reused.
 3. Expand S57 To GIS.tbx
 
 ![App](toolbox.png)
+
+4. Double click the S57 To GIS tool to open it.
+
+![App](tool.png)
+
+5. For the Input Directory, browse to the location of the cells(s) you want to import
+Note: The cells in the input directory can be in either the US or International exchange set
+format, or they can simply be contained under the Input Directory in no particular structure.
+6. For the Target Workspace, browse to the location of the geodatabase you want to import into.
+7. For Map Document, choose a template map document for visualizing the output.
+8. Click OK
+The cells are imported, the data is symbolized, and the map document is resourced and zoomed
+to the target workspace data.
