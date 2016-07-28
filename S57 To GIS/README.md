@@ -16,7 +16,7 @@ Overview of materials provided:
 * S57_GIS.gdb – A preconfigured geodatabase template schema.
 
 Overview of tool functions:
-* This script iterates through the contents of the Input Directory parameter and finds all S-57 cells and their associated updates.
+* This script iterates through the contents of the *Input Directory* parameter and finds all S-57 cells and their associated updates.
 * The list of cells is then imported into the workspace defined in the Target Workspace parameter.
 * Once the import process is complete, the script calculates S-52 on the geodatabase
 * Lastly, the script resources the feature classes from the Target Workspace to the map document selected in the Map Document parameter. It also zooms the data frame in the map document to the extent of all of all the Meta polygon features (M_QUAL, for example).
