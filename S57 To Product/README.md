@@ -16,8 +16,8 @@ The tool performs the following functions
 6. In the Product Library window, expand Product Library > Products > Nautical > ENC
 7. Right click on the ENC node and choose Properties
 The Class Properties dialog appears
-8. Click Nautical Environment from the left pane of the Class Properties dialogg
-9. Under Nautical Information System (NIS), click the ellipses next to the Workspace property and browse to the location of your NIS geodatabase.  
+8. Click Nautical Environment from the left pane of the Class Properties dialog
+9. Under Nautical Information System (NIS), click the ellipses next to the Workspace property and browse to the location of your NIS geodatabase  
 Your NIS is now set at the Class level and any products.  
 **Note:** You must set the NIS Workspace property before you create any Series under the ENC class if you want the Series to automatically inherit the NIS set at the Class level.
 
