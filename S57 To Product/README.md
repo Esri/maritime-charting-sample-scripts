@@ -24,13 +24,9 @@ Your NIS is now set at the Class level and any products
 
 10. Open the ArcCatalog window in ArcMap and navigate to the location of the **S57 To Product.tbx.**
 11. Expand the S57 To Product.tbx
-
 ![App](pic1.png)
-
 12. Double click **S57 To Product** to open the tool.
-
 ![App](pic2.png)
-
 13. For **Input Directory**, browse to the directory that contains the ENC cells you want to use to define your products and populate your NIS.
 14. For the **Product Library Workspace**, browse to the location of your Product Library.
 After you define the Product Library Workspace, the Series parameter will populate with a dropdown list of available Series in the Product Library.
