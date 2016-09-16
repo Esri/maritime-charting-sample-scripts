@@ -28,7 +28,7 @@ Some caveats for this tool are:
 5. Open -> S57 to chart.<br/>
   **Note:**: If you copied the S57toChart folder directly under your C drive, the parameters are automatically set for you.<br/>
   ![App](Capture.PNG)<br/>
-  For the Input S-57 directory, browse to the folder that contains the S-57 ENC that will be used to
+6. For the Input S-57 directory, browse to the folder that contains the S-57 ENC that will be used to
   create the chart.<br/>
 **Note:**: A sample cell is provided for you. If there are multiple cells in the directory, they will all be
   imported into the geodatabase.<br/>
