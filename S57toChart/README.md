@@ -28,14 +28,14 @@ Some caveats for this tool are:
   ![App](Capture2.PNG)
 5. Open -> S57 to chart.
   **Note:**: If you copied the S57toChart folder directly under your C drive, the parameters are automatically set for you.
-  ![App](Capture.PNG)
+  ![App](Capture.PNG)<br/>
   For the Input S-57 directory, browse to the folder that contains the S-57 ENC that will be used to
-  create the chart.
+  create the chart.<br/>
 **Note:**: A sample cell is provided for you. If there are multiple cells in the directory, they will all be
-  imported into the geodatabase.
-7. Navigate to the location of the template database.
+  imported into the geodatabase.<br/>
+7. Navigate to the location of the template database.<br/>
   **Note:**: A template database is provided for you. This database will be copied by the tool, leaving
-  the original template for future use.
+  the original template for future use.<br/>
 8. For the template map document, browse to the mxd that will be used to create the chart.
   **Note:**: A template mxd is provided for you. The template map document will be copied by the
   tool, leaving the original template for future use.
