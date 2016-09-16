@@ -31,7 +31,7 @@ Some caveats for this tool are:
   ![App](Capture.PNG)
   For the Input S-57 directory, browse to the folder that contains the S-57 ENC that will be used to
   create the chart.
-  **Note:**: A sample cell is provided for you. If there are multiple cells in the directory, they will all be
+**Note:**: A sample cell is provided for you. If there are multiple cells in the directory, they will all be
   imported into the geodatabase.
 7. Navigate to the location of the template database.
   **Note:**: A template database is provided for you. This database will be copied by the tool, leaving
