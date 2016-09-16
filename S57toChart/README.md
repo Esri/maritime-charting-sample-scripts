@@ -25,7 +25,7 @@ Some caveats for this tool are:
 3. In ArcCatalog, navigate to the location you copied the tool to on your machine.
 4. Expand S57toChart.tbx.
   ![App](Capture2.PNG)
-5. Open -> S57 to chart
+5. Open -> S57 to chart.
   **Note:**: If you copied the S57toChart folder directly under your C drive, the parameters are automatically set for you.
   ![App](Capture.PNG)
   For the Input S-57 directory, browse to the folder that contains the S-57 ENC that will be used to
