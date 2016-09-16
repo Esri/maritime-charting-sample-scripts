@@ -24,6 +24,7 @@ Some caveats for this tool are:
 2. Open ArcMap.
 3. In ArcCatalog, navigate to the location you copied the tool to on your machine.
 4. Expand S57toChart.tbx.
+
   ![App](Capture2.PNG)
 
 5. Open -> S57 to chart.
