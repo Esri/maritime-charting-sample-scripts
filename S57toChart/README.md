@@ -23,11 +23,10 @@ Some caveats for this tool are:
 1. Copy the entire S57toChart folder and paste to your machine.
 2. Open ArcMap.
 3. In ArcCatalog, navigate to the location you copied the tool to on your machine.
-4. Expand S57toChart.tbx.
-
-  ![App](Capture2.PNG)
-5. Open -> S57 to chart.
-  **Note:**: If you copied the S57toChart folder directly under your C drive, the parameters are automatically set for you.
+4. Expand S57toChart.tbx.<br/>
+  ![App](Capture2.PNG)<br/>
+5. Open -> S57 to chart.<br/>
+  **Note:**: If you copied the S57toChart folder directly under your C drive, the parameters are automatically set for you.<br/>
   ![App](Capture.PNG)<br/>
   For the Input S-57 directory, browse to the folder that contains the S-57 ENC that will be used to
   create the chart.<br/>
@@ -36,13 +35,13 @@ Some caveats for this tool are:
 7. Navigate to the location of the template database.<br/>
   **Note:**: A template database is provided for you. This database will be copied by the tool, leaving
   the original template for future use.<br/>
-8. For the template map document, browse to the mxd that will be used to create the chart.
+8. For the template map document, browse to the mxd that will be used to create the chart.<br/>
   **Note:**: A template mxd is provided for you. The template map document will be copied by the
-  tool, leaving the original template for future use.
-9. Type a scale for the chart. The value you enter will be used as the reference scale for the chart.
+  tool, leaving the original template for future use.<br/>
+9. Type a scale for the chart. The value you enter will be used as the reference scale for the chart.<br/>
 10. Browse to a Write location and type a name for the output folder that will be created as the
-output directory.
-11. Click OK
+output directory.<br/>
+11. Click OK<br/>
 The directory defined in the Write location parameter is created and the chart database and map
-document are generated there.
+document are generated there.<br/>
 12. Open the map document that is generated in the Write location directory to view the results.
