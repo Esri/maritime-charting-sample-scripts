@@ -48,9 +48,7 @@ tool, leaving the original template for future use.
 
 10. Browse to a Write location and type a name for the output folder that will be created as the
 output directory.
-
 11. Click OK
 The directory defined in the Write location parameter is created and the chart database and map
 document are generated there.
-
 12. Open the map document that is generated in the Write location directory to view the results.
