@@ -26,7 +26,6 @@ Some caveats for this tool are:
 4. Expand S57toChart.tbx.
 
   ![App](Capture2.PNG)
-
 5. Open -> S57 to chart.
   **Note:**: If you copied the S57toChart folder directly under your C drive, the parameters are automatically set for you.
   ![App](Capture.PNG)
