@@ -7,7 +7,8 @@ This repository contains simple models and python scripts that demonstrate how t
 
 ## Features
 * S57 to GIS - A python script that allows you to load ENC cells into a geodatabase that is symbolized with S-52
-* S57 to Chart - A python script that makes importing ENC data and creating official ENC products with ArcGIS simple and fast
+* S57 to Product - A python script that makes importing ENC data and creating official ENC products with ArcGIS simple and fast
+* S57toChart - A python script tool that takes an S-57 ENC file and outputs a paper chart map document
 
 ## Instructions
 
