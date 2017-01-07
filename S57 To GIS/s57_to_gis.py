@@ -1,20 +1,8 @@
-Copyright 2016 Esri
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-       http://www.apache.org/licenses/LICENSE-2.0
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
-
-
 """
 s57_to_gis.py
 Esri - Database Services
 Brooke Reams, breams@esri.com
-July 7, 2016
+December 15, 2016 edit for 10.5 and 10.5.1 
 - Imports multiple enc base and update files from a folder into an NIS schema.
 - Calculates symbology on NIS database.
 - Re-sources layers in map document.
@@ -32,6 +20,7 @@ try:
     fldr = arcpy.GetParameterAsText(0)
     target_wrkspc = arcpy.GetParameterAsText(1)
     map_doc = arcpy.GetParameterAsText(2)
+
 
     # Check for Nautical extension
     if arcpy.CheckExtension("Nautical") == "Available":
@@ -58,7 +47,7 @@ try:
                     if update_cells:
                         arcpy.AddMessage("\t\t" + "\n\t\t".join([os.path.basename(cell) for cell in update_cells]))
                     try:
-                        arcpy.ImportS57ToGeodatabase_nautical(base_cell, update_cells, target_wrkspc)
+                        arcpy.ImportS57ToGeodatabase_nautical(base_cell, target_wrkspc, update_cells)
                     except:
                         msgs = arcpy.GetMessage(0)
                         msgs += arcpy.GetMessages(2)
@@ -86,7 +75,7 @@ try:
                     if update_cells_sorted:
                         arcpy.AddMessage("\t\t" + "\n\t\t".join([os.path.basename(cell) for cell in update_cells_sorted]))
                     try:
-                        arcpy.ImportS57ToGeodatabase_nautical(base_cell, update_cells_sorted, target_wrkspc)
+                        arcpy.ImportS57ToGeodatabase_nautical(base_cell, target_wrkspc, update_cells_sorted)
                     except:
                         msgs = arcpy.GetMessage(0)
                         msgs += arcpy.GetMessages(2)
@@ -105,7 +94,7 @@ try:
 
     # Calculate symbology on target workspace (NIS)
     arcpy.AddMessage("Calculating symbology")
-    arcpy.CalculateSymbology_nautical("S-52", "true", calc_fcs)
+    arcpy.CalculateSymbology_nautical("S-52", calc_fcs, "true")
 
 
     # Check workspace type of target workspace
