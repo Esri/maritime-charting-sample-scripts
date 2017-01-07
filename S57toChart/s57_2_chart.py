@@ -3,8 +3,8 @@
 # Purpose:
 #
 # Author:      Brooke Reams and Patricia Sheatsley
-# Created:     June 23, 2016
-# Release:     10.4.1 final release no QFEs
+# Created:     November 3, 2016
+# Release:     10.5
 #-------------------------------------------------------------------------------
 
 import arcpy, arcpyproduction, os, sys, traceback, shutil, re, smtplib, ConfigParser
@@ -40,10 +40,11 @@ REF_SCALE = arcpy.GetParameterAsText(3)
 output_fldr = arcpy.GetParameterAsText(4)
 
 
-##input_fldr = r'C:\S57toChart\InputCells'
-##chart_schema = r'C:\S57toChart\Templates\ChartSchemaTemplate.gdb'
-##template_mxd = r'C:\S57toChart\Templates\ChartTemplate.mxd'
-##output_fldr = r'C:\S57toChart\Output'
+##input_fldr = r'C:\Data\S57toChart\InputCells'
+##chart_schema = r'C:\Data\S57toChart\Templates\ChartSchemaTemplate.gdb'
+##template_mxd = r'C:\Data\S57toChart\Templates\ChartTemplate.mxd'
+##REF_SCALE = '50000'
+##output_fldr = r'C:\Data\S57toChart\Output'
 
 def getAOI(prod_db):
     # Set workspace
@@ -218,7 +219,7 @@ def main():
             # Import S57 to gdb
             print "\tImporting " + s57_name
             arcpy.AddMessage("\tImporting S-57 cell and updates...")
-            arcpy.ImportS57ToGeodatabase_nautical(s57_file, update_list, output_gdb)
+            arcpy.ImportS57ToGeodatabase_nautical(s57_file, output_gdb, update_list)
 
             # Retrieve aoi
             arcpy.AddMessage("\tFinding area of interest...")
@@ -232,8 +233,8 @@ def main():
 
             # Chart automation
             print "\tRunning Chart Automation tool"
-            arcpy.AddMessage("\tChart automation tool...\n\t\tAdd layers to TOC, create grids, generate cartographic limits, convert labels to annotation")
-            arcpy.ChartAutomation_nautical("'Add Layers to TOC'; 'Create Grids and Graticules';'Generate Cartographic Limits';'Convert Labels to Annotation'", aoi, REF_SCALE, output_gdb, "PATH_TO_MXD", map_doc, DF_NAME)
+            arcpy.AddMessage("\tChart automation tool...\n\t\tAdd layers to TOC, create grids, generate light sectors, generate cartographic limits, calculate symbology, convert labels to annotation")
+            arcpy.ChartAutomation_nautical("'Add Layers to TOC'; 'Generate Light Sectors';'Calculate Symbology';'Create Grids and Graticules'; 'Generate Cartographic Limits';'Convert Labels to Annotation'", REF_SCALE, output_gdb, "PATH_TO_MXD", map_doc, aoi, DF_NAME)
             #ZOC diagram tool
             print "\tRunning Create ZOC diagram tool"
             arcpy.AddMessage("\tCreating zone of confidence diagram...")
@@ -251,15 +252,6 @@ def main():
             arcpy.RefreshActiveView()
             arcpy.RefreshTOC()
             
-            # Get list of feature classes to calculate symbology
-            arcpy.env.workspace = output_gdb
-            calc_list = [os.path.join(output_gdb, CARTO_FDS, fc) for fc in CARTO_FCS]
-            calc_list.extend([os.path.join(output_gdb, NAUT_FDS, fc) for fc in NAUT_FCS])
-            
-            # Calculate symbology
-            print "\tCalculating Symbology..."
-            arcpy.AddMessage("\tCalculating symbology")
-            arcpy.CalculateSymbology_nautical("INT1", "true", calc_list)
             mxd.save()
 
     except ex, (instance):
