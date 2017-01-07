@@ -2,7 +2,7 @@
 s57_to_product.py
 Esri - Database Services
 Brooke Reams, breams@esri.com
-July 7, 2016
+December 15, 2016 for 10.5 amd 10.5.1
 - Creates an S-57 product in the Product Library for each input .000.
 - Imports multiple enc base and update files from a folder into an NIS schema.
 
@@ -49,7 +49,7 @@ try:
                     if update_cells:
                         arcpy.AddMessage("\t\t" + "\n\t\t".join([os.path.basename(cell) for cell in update_cells]))
                     try:
-                        arcpy.ImportS57ToGeodatabase_nautical(base_cell, update_cells, target_wrkspc)
+                        arcpy.ImportS57ToGeodatabase_nautical(base_cell, target_wrkspc, update_cells)
                     except:
                         msgs = arcpy.GetMessage(0)
                         msgs += arcpy.GetMessages(2)
@@ -78,7 +78,7 @@ try:
                     if update_cells_sorted:
                         arcpy.AddMessage("\t\t" + "\n\t\t".join([os.path.basename(cell) for cell in update_cells_sorted]))
                     try:
-                        arcpy.ImportS57ToGeodatabase_nautical(base_cell, update_cells_sorted, target_wrkspc)
+                        arcpy.ImportS57ToGeodatabase_nautical(base_cell, target_wrkspc, update_cells_sorted)
                     except:
                         msgs = arcpy.GetMessage(0)
                         msgs += arcpy.GetMessages(2)
