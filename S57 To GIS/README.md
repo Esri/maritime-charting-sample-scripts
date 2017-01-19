@@ -36,12 +36,12 @@ documents, keeping the originals as a template that can be reused.
 
 5. For the **Input Directory**, browse to the location of the cells(s) you want to import
 
-Note: The cells in the input directory can be in either the US or International exchange set
+  Note: The cells in the input directory can be in either the US or International exchange set
 format, or they can simply be contained under the Input Directory in no particular structure.
 
 6. For the **Target Workspace**, browse to the location of the geodatabase you want to import into.
 
-Note: The geodatabase needs to contain the correct schema to receive the data. Download the file **S57_GIS.zip** from this repository, and unzip it. It contains the schema required and can be used as the **Target Workspace**.
+  Note: The geodatabase needs to contain the correct schema to receive the data. Download the file **S57_GIS.zip** from this repository, and unzip it. It contains the schema required and can be used as the **Target Workspace**.
 
 7. For **Map Document**, choose a template map document for visualizing the output.
 8. Click OK
