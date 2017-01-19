@@ -32,7 +32,6 @@ documents, keeping the originals as a template that can be reused.
 ![App](toolbox.png)
 
 4. Double click the S57 To GIS tool to open it.
-
 ![App](tool.png)
 
 5. For the **Input Directory**, browse to the location of the cells(s) you want to import
