@@ -29,7 +29,6 @@ documents, keeping the originals as a template that can be reused.
 1. Open ArcMap
 2. In ArcMap, open the ArcCatalog window and navigate to the location of the S57 To GIS.tbx.
 3. Expand **S57 To GIS.tbx**
-
 ![App](toolbox.png)
 
 4. Double click the S57 To GIS tool to open it.
