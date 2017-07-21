@@ -17,9 +17,10 @@ import arcpy, sys, os, traceback, re
 try:
     # Get user params
     fldr = arcpy.GetParameterAsText(0)
-    pl = arcpy.GetParameterAsText(1)
-    series = arcpy.GetParameterAsText(2) ## "Nautical::ENC::ENC"
-    target_wrkspc = arcpy.GetParameterAsText(3)
+    target_wrkspc = arcpy.GetParameterAsText(1)
+    boolCreateProduct = arcpy.GetParameter(2)
+    pl = arcpy.GetParameterAsText(3)
+    series = arcpy.GetParameterAsText(4) ## "Nautical::ENC::ENC"
 
     # Initialize list to store path to all base cells used to create products in PL
     base_cells = []
@@ -39,8 +40,8 @@ try:
                 if os.path.basename(root) != "0":
                     update_cells = []
                     for item in os.listdir(root):
-                        if not re.search(".000$", item) and re.search(".[0-9][0-9][0-9]$", item):
-                            update_cells.append(os.path.join(root, item)) 
+                        if not re.search(file[0:-4] + ".000$", item) and re.search(file[0:-4] + ".[0-9][0-9][0-9]$", item):
+                            update_cells.append(os.path.join(root, item))
                     update_cells.sort()
                     base_cell = os.path.join(root, file)
                     base_cells.append(base_cell)
@@ -69,7 +70,7 @@ try:
                             for item in os.listdir(root2):
                                 if not re.search(".000$", item) and re.search(".[0-9][0-9][0-9]$", item):
                                     update_cells.append((root2, item))
-                    sorted_list = sorted(update_cells, key=lambda cell: cell[1]) 
+                    sorted_list = sorted(update_cells, key=lambda cell: cell[1])
                     update_cells_sorted = []
                     for cell in sorted_list:
                         update_cells_sorted.append(os.path.join(cell[0], cell[1]))
@@ -86,19 +87,20 @@ try:
 
 
     # Create S-57 product for each base cell
-    arcpy.AddMessage("Creating products in Product Library:")
-    for enc in base_cells:
-        arcpy.AddMessage("\t" + enc)
-        try:
-            arcpy.CreateS57Product_nautical(in_s57_cell=enc, in_pl_workspace=pl, in_pl_series=series)
-        except:
-            msgs = arcpy.GetMessage(0)
-            msgs += arcpy.GetMessages(2)
-            arcpy.AddWarning(msgs)
+    if boolCreateProduct:
+        arcpy.AddMessage("Creating products in Product Library:")
+        for enc in base_cells:
+            arcpy.AddMessage("\t" + enc)
+            try:
+                arcpy.CreateS57Product_nautical(in_s57_cell=enc, in_pl_workspace=pl, in_pl_series=series)
+            except:
+                msgs = arcpy.GetMessage(0)
+                msgs += arcpy.GetMessages(2)
+                arcpy.AddWarning(msgs)
 
 
     # Set target workspace as output
-    arcpy.SetParameterAsText(4, target_wrkspc)
+    arcpy.SetParameterAsText(5, target_wrkspc)
 
 
 except arcpy.ExecuteError:

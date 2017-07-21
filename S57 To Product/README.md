@@ -27,9 +27,10 @@ Your NIS is now set at the Class level and any products.
 12. Double click **S57 To Product** to open the tool.  
 ![App](pic2.png)
 13. For **Input Directory**, browse to the directory that contains the ENC cells you want to use to define your products and populate your NIS.
-14. For the **Product Library Workspace**, browse to the location of your Product Library.
+14. For the **NIS Workspace**, browse to the location of your NIS. This could be a folder for a File GDB or a database connection for an enterprise GDB.
+15. If you only want to import the S-57 files, uncheck the **Create Product?** checkbox. If you want to create product definitions in the Product Library, leave the checkbox checked.
+16. For the **Product Library Workspace**, if you want to create product definitions, browse to the location of your Product Library.
 After you define the Product Library Workspace, the Series parameter will populate with a dropdown list of available Series in the Product Library.
 15. From the **Series** parameter dropdown, choose a Series to create the products under.
-16. For the **NIS Workspace**, browse to the location of your NIS.
 
 The products are created in the Product Library and the cells are imported into the NIS.
